@@ -1,7 +1,10 @@
 # *Note_Taker*
 ![license shield](https://img.shields.io/badge/License-mit-red.svg)
 ## Description
-This application allows the user to write, post, save, and delete Notes. It utilizes an express backend, which saves and retries data from a JSON file. 
+This application allows the user to write, post, save, and delete Notes. It utilizes an express backend, which saves and retries data from a JSON file.
+
+![](/public/assets/images/screenshot2.png)
+
 ## Table of Contents (Optional)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -10,7 +13,10 @@ This application allows the user to write, post, save, and delete Notes. It util
 ## Installation
 Run `npm install` to download required packages.
 ## Usage
-Navigate to `localhost:8080/` to get started. You can also view the app on Heroku by [clicking here](https://note-taker-101-1.herokuapp.com "Visit the app")! 
+Navigate to `localhost:8080/` to get started. You can also view the app on Heroku by [clicking here](https://note-taker-101-1.herokuapp.com "Visit the app")!
+
+![](/public/assets/images/screenshot1.png)
+
 ## License
 [mit](LICENSE)
 ## Contributing 

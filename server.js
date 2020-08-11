@@ -3,6 +3,7 @@ const express = require('express');
 // Creates an express server
 const app = express();
 
+let noteCount = 1;
 // Sets an initial port.
 const PORT = process.env.PORT || 8080;
 
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // points server to route files
-
+require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
 //Starts the server

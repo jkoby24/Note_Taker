@@ -13,7 +13,7 @@ const writeNotes = (noteData) => {
     path.join(__dirname, '../db/db.json'),
     JSON.stringify(noteData),
     (err) => {
-      if (err) return { err };
+      if (err) throw { err };
     }
   );
 };
@@ -31,8 +31,16 @@ module.exports = function (app) {
     // Server responds to user request to post new note
     let noteData = readNotes();
     let newNote = req.body;
-    let lastNoteID = !noteData[0] ? 0 : noteData[noteData.length - 1].id;
-    let newNoteID = lastNoteID + 1;
+
+    function lastNoteID() {
+      if (!noteData[0]) {
+        return 0;
+      } else {
+        noteData[noteData.length - 1].id;
+      }
+    }
+
+    let newNoteID = lastNoteID() + 1;
 
     newNote.id = newNoteID;
     noteData.push(newNote);
@@ -40,6 +48,7 @@ module.exports = function (app) {
     return res.json(noteData);
   });
 
+  // Server responds to user request to delete note based on note id
   app.delete('/api/notes/:id', function (req, res) {
     const noteData = readNotes();
     const noteId = req.params.id;

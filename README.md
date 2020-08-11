@@ -11,7 +11,7 @@ This application allows the user to write, post, save, and delete Notes. It util
 Run `npm install` to download required packages.
 ## Usage
 Navigate to `localhost:8080/` to get started. You can also view the app on Heroku by [clicking here](https://note-taker-101-1.herokuapp.com "Visit the app")! 
-## Licensehttps://note-taker-101-1.herokuapp.com
+## License
 [mit](LICENSE)
 ## Contributing 
 Please feel free to provide any feedback. My email will be listed below. 
